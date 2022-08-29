@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<title>Quadrierer 3</title>
+		
+		<script>
+			"use strict";
+
+	function Ausgabe(){
+			
+			let vOutput = "";
+			let x=1;
+			let Quadrat2;
+			let Quadrat3;
+			let Zahl = document.getElementById("idInput").value;
+			vOutput = "Jetzt kommt eine Wertetabelle...<br>";		
+			vOutput = vOutput + "<table border=1>";	
+			vOutput = vOutput + "<tr><th>Zahl<sup>3</sup></td><th>x<sup>2</sup></td><th>x<sup>2</sup></th></tr>";
+			
+			while (x <= Zahl) {
+			Quadrat3 = x*x*x;
+			Quadrat2 = x*x;
+			vOutput = vOutput + "<tr><td>" + x + "</td><td>" + Quadrat2 + "</td>" + "<td>" + Quadrat3 + "</td></tr>" ;
+			x = x + 1;
+			}
+			
+			document.getElementById("idAusgabe").innerHTML = vOutput;
+			}	
+
+		
+		</script>
+	
+	</head>
+
+	<body>
+		<h1>Zahlengenerator (Quadrierer) </h1>
+		Gib eine Zahl an <input id="idInput" type="text" value="10"><br><br>
+		<button onclick="Ausgabe();">Berechne!</button><br><br>
+		<div id="idAusgabe"></div>
+		
+	</body>
+</html>
